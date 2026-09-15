@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DICE</title>
+</head>
+
+<body>
+    <h1>Roll Dice</h1>
+
+ <div>  Dice Roll 4 side:
+    <input type="text" id="dice4" value="4">
+    <img src="https://tse1.mm.bing.net/th/id/OIP.1T1W11JtbZr83NLmFbqK2QHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+         class="dice-img"
+         onclick="rollDice4()">
+
+    <script>
+        function rollDice4()
+        {
+            var dice4 = Math.floor((Math.random() * 4) + 1);
+            document.getElementById("dice4").value = dice4;
+        }
+    </script>
+</div> 
+<div>
+    Dice Roll 6 side:
+    <input type="text" id="dice6" value="6">
+    <img src="https://cdn.shopify.com/s/files/1/1483/3510/products/11145534-metal-tech-dice-d6_large.jpg?v=1474853033"
+        class="dice-img"
+        onclick="rollDice6()">
+
+    <script>
+        function rollDice6()
+        {
+            var dice6 = Math.floor((Math.random() * 6) + 1);
+            document.getElementById("dice6").value = dice6;
+        }
+    </script>
+</div>
+<div>
+    Dice Roll 8 side:
+    <input type="text" id="dice8" value="8">
+    <img src="https://tse1.mm.bing.net/th/id/OIP.qFTKhfBchVELXp_zPql_XAHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+         class="dice-img"
+         onclick="rollDice8()">
+
+    <script>
+        function rollDice8()
+        {
+            var dice8 = Math.floor((Math.random() * 8) + 1);
+            document.getElementById("dice8").value = dice8;
+        }
+    </script>
+</div>
+<div>
+    Dice Roll 10 side:
+    <input type="text" id="dice10" value="10">
+    <img src="https://tse3.mm.bing.net/th/id/OIP.krBgX3OGexS_7_BSMReXpAHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+         class="dice-img"
+         onclick="rollDice10()">
+
+    <script>
+        function rollDice10()
+        {
+            var dice10 = Math.floor((Math.random() * 10) + 1);
+            document.getElementById("dice10").value = dice10;
+        }
+    </script>
+</div>
+<div>
+    Dice Roll 12 side:
+    <input type="text" id="dice12" value="12">
+    <img src="https://tse3.mm.bing.net/th/id/OIP.-0kqHYH__xrv5VjO4hDfoAHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+         class="dice-img"
+         onclick="rollDice12()">
+
+    <script>
+        function rollDice12()
+        {
+            var dice12 = Math.floor((Math.random() * 12) + 1);
+            document.getElementById("dice12").value = dice12;
+        }
+    </script>
+</div>
+<div>
+    Dice Roll 20 side:
+    <input type="text" id="dice20" value="20">
+    <img src="https://tse2.mm.bing.net/th/id/OIP.vwf7i1NaJhACpAsIYDZIlQHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+         class="dice-img"
+         onclick="rollDice20()">
+
+    <script>
+        function rollDice20()
+        {
+            var dice20 = Math.floor((Math.random() * 20) + 1);
+            document.getElementById("dice20").value = dice20;
+        }
+    </script>
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+<style>
+    body {
+        background:black;
+        color: white;
+        font-family:Arial, sans-serif;
+    }
+
+    
+
+input{
+    border-radius:15px;      /* Rounded corners */
+    border:2px solid #00ffff;
+    padding:8px;
+    background:#111;
+    color:white;
+    box-shadow:0 0 10px #00ffff; /* Glow effect */
+}
+
+button{
+    border-radius:15px;
+    padding:8px 15px;
+    background:#00ffff;
+    border:none;
+    cursor:pointer;
+    box-shadow:0 0 15px #00ffff;
+}
+
+button:hover{
+    box-shadow:0 0 25px #00ffff;
+}
+
+.dice-box{
+    margin-bottom:20px; /* Space between rows */
+}
+
+.dice-img{
+    width:60px;
+    height:60px;
+    cursor:pointer;
+    margin-left:10px;
+    vertical-align:middle;
+    border-radius:15px;
+    box-shadow:0 0 15px #00ffff;
+    transition:0.2s;
+}
+
+.dice-img:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 25px #00ffff;
+}
+.dice-row{
+    margin-bottom:40px;
+}
+</style>
+</html>
