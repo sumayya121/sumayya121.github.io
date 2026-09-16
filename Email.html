@@ -1,0 +1,104 @@
+<html>
+<head>
+<script>
+function validateform()
+{
+    var username = document.forms["Form1"]["username"].value;
+    var email = document.forms["Form1"]["email"].value;
+    var password1 = document.forms["Form1"]["password1"].value;
+    var password2 = document.forms["Form1"]["password2"].value;
+    if(username=="" || username=="") 
+    {
+        alert("Username must be filled in");
+        return false;
+    }
+
+    if(email=="" || email=="") 
+    {
+        alert("Email must be filled in");
+        return false;
+    }
+
+    if(password1!=password2  || password1=="") 
+    {
+        alert("Passwords must be the same ");
+        return false;
+    }
+
+    var foundAt = 0;
+    var foundDot = 0;
+
+    for(i=0;i<email.length;i++)
+    {
+         
+       
+           if(email[i]=='@'){foundAt = i;}
+           if(email[i]=='.'){foundDot = i;}
+
+       
+    }
+    if(foundAt>1 && foundDot > foundAt + 3 && foundDot < email.length - 2)
+    {
+        return true;
+    }
+ 
+
+
+    else 
+    {
+        alert("invalid email");
+        return false;
+    }
+
+
+   
+
+    
+}
+</script>
+</head>
+<body>
+<h1 class="title">
+    <img src="https://tse4.mm.bing.net/th/id/OIP.lHHR4sDUXGcHOxUv2w44sQHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"> 
+    Form Validation
+    <img src="https://tse4.mm.bing.net/th/id/OIP.lHHR4sDUXGcHOxUv2w44sQHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3">
+
+
+<strong>
+<form name="Form1" action="actionForm.html" onsubmit="return validateform()">
+
+<p>Username: <input type="text" name ="username" value="">
+<p></p>
+<p>Email: <input type="text" name ="email" value="">
+<p></p>
+<p>Password: <input type="password" name ="password1" value="">
+<p></p>
+<p>Confirm Password: <input type="password" name ="password2" value="">
+<p></p>
+<p> <input type="submit" value="Submit">
+<p></p>
+</form>
+</strong>
+<style>
+    body{
+        background : black;
+        color : pink;
+        text-shadow: 0 0 10px pink;
+        text-align: center;
+    }
+    .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.bow {
+    width: 40px;
+    height: auto;
+}
+   
+</style>
+
+</body>
+
