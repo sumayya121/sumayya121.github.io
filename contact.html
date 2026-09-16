@@ -115,5 +115,89 @@ ul li a {
 ul li a:hover {
   background-color: #111111;
 }
+
+img {
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px #00ffff;
+  }
+  to {
+    box-shadow:
+      0 0 20px #00ffff,
+      0 0 40px #00ffff,
+      0 0 60px #00ffff;
+  }
+}
+
+@keyframes pulse {
+    0% {
+        text-shadow: 0 0 5px #00ffff;
+    }
+
+    50% {
+        text-shadow:
+            0 0 10px #00ffff,
+            0 0 20px #00ffff,
+            0 0 40px #00ffff;
+    }
+
+    100% {
+        text-shadow: 0 0 5px #00ffff;
+    }
+}
+ul {
+display: flex;
+justify-content: center;
+gap: 80px;
+list-style: none;
+}
+
+ul a {
+text-decoration: none;
+color: #00ffff;
+font-family: monospace;
+font-size: 24px;
+text-transform: uppercase;
+animation: pulse 2s ease-in-out infinite;
+}
+
+ul li a::before {
+    content: "[ ";
+}
+
+ul li a::after {
+    content: " ]";
+}
+
+
+a::before,
+a::after {
+    transition: 0.3s ease;
+}
+
+a::before {
+    content: "[";
+    margin-right: 5px;
+}
+
+a::after {
+    content: "]";
+    margin-left: 5px;
+}
+
+a:hover::before {
+    margin-right: 15px;
+}
+
+a:hover::after {
+    margin-left: 15px;
+}
+
+
+
 </style>
+
 
